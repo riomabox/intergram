@@ -22,9 +22,9 @@ app.post('/hook', function(req, res){
         if (text.startsWith("/start")) {
             console.log("/start chatId " + chatId);
             sendTelegramMessage(chatId,
-                "*Welcome to Intergram* \n" +
-                "Your unique chat id is `" + chatId + "`\n" +
-                "Use it to link between the embedded chat and this telegram chat",
+                "*Selamat Datang di Layanan Live Chat Portal Itjen Kemenkeu RI* \n" +
+                "Kode unik chat anda adalah `" + chatId + "`\n" +
+                "Gunakan tautan ini untuk menghubungkan antara live chat terkait dengan akun telegram anda",
                 "Markdown");
         } else if (reply) {
             let replyText = reply.text || "";
@@ -60,7 +60,7 @@ io.on('connection', function(socket){
 
         socket.on('disconnect', function(){
             if (messageReceived) {
-                sendTelegramMessage(chatId, userId + " has left");
+                sendTelegramMessage(chatId, userId + " telah meninggalkan obrolan");
             }
         });
     });
