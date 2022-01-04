@@ -1,6 +1,5 @@
 import { h, render } from 'preact';
 import Chat from './chat';
-import {hri} from 'human-readable-ids';
 import * as store from 'store'
 
 let conf = {};
@@ -32,12 +31,12 @@ function getUrlParameter(name) {
 
 function getUserId () {
     if (store.enabled) {
-        return store.get('userId') || store.set('userId', hri.random());
+        return store.get('userId') || store.set('userId', generateRandomId());
     } else {
-        return hri.random();
+        return generateRandomId();
     }
 }
 
-/*function generateRandomId() {
+function generateRandomId() {
     return Math.random().toString(36).substr(2, 6);
-}*/
+}
