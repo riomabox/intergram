@@ -29,6 +29,7 @@
     "dateformat": "^2.0.0",
     "eslint": "^6.5.1",
     "express": "^4.16.4",
+    "human-readable-ids": "^1.0.4",
     "preact": "^7.1.0",
     "request": "^2.79.0",
     "shx": "^0.2.2",
