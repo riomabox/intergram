@@ -198,7 +198,7 @@ io.on('connection', function(client){
 
 function sendTelegramMessage(chatId, text, parseMode, disableNotification) {
     request
-        .post('https://api.telegram.org/bot' + '5097902209:AAHKqhfasVvsmmRzeMYvxGwBUZ99MxvNvS0' + '/sendMessage')
+        .post('https://api.telegram.org/bot' + '5029496395:AAGXOlrMK9I7dzd0svt5KYXnVYuQvNlHli4' + '/sendMessage')
         .form({
             "chat_id": chatId,
             "text": text,
