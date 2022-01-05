@@ -2,10 +2,6 @@
   "name": "intergram",
   "version": "0.0.1",
   "description": "A live chat widget linked to your telegram messenger",
-  "engines": {
-    "node": "6.9.1",
-    "npm": "3.10.8"
-  },
   "scripts": {
     "start": "node server.js",
     "dev": "start  http://localhost:3000/demo.html & node devServer.js",
