@@ -35,12 +35,13 @@ export default class MessageArea extends Component {
             <div class="chat" ref={(el) => {this.chat = el;}}>
                 {props.messages.map(({name, text, from, time}) => {
                     if (from === 'visitor') {
-                        name = "You";
+                        name = "";
                     }
                     return (
                         <div class={'chat-message ' + from}>
                             <div class="msg">
-                                <p>{name ? name + ': ' + text : text}</p>
+                                <p><span class='msg-bold'>{name ? name + ': ' : ''}</span>{text.trim()}</p>
+                                {/* <p>{text.split('\n').map((item, key) => <span key={key}>{item}<br/></span>)}</p> */}
                                 { (props.conf.displayMessageTime) ?
                                     <div class="time">
                                         {
