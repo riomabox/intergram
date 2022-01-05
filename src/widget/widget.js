@@ -24,7 +24,7 @@ export default class Widget extends Component {
     render({conf, isMobile}, {isChatOpen, pristine}) {
 
         const wrapperWidth = {width: conf.desktopWidth};
-        const desktopHeight = (window.innerHeight - 100 < conf.desktopHeight) ? window.innerHeight - 90 : conf.desktopHeight;
+        const desktopHeight = (window.innerHeight - 100 < conf.desktopHeight) ? window.innerHeight : conf.desktopHeight;
         const wrapperHeight = {height: desktopHeight};
 
         return (
