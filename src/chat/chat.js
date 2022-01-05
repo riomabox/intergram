@@ -44,7 +44,7 @@ export default class Chat extends Component {
                     {
                         this.props.conf.displayBanner ?
                             <a class="banner" href="https://github.com/idoco/intergram" target="_blank">
-                                Powered by <b>Intergram</b>&nbsp;
+                                Powered by <b>BSIP Itjen</b>&nbsp;
                             </a>
                             : ''
                     }
