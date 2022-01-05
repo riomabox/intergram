@@ -3,7 +3,7 @@
 
 html, body {
     background: #e5e5e5;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0 auto;
 }
 
@@ -23,15 +23,16 @@ body > div,
 
 .chat {
     background: none;
-    padding: 0 0 5.6rem 0;
-    margin: 0;
+    padding: 0 0 10px;
     flex: 1;
     height: 0;
     overflow: auto;
 }
 
 .chat-message {
+    padding: 8px;
     padding: 0.5rem;
+    font-size: 14.4px;
     font-size: 0.9rem;
     overflow: hidden;
     display: -webkit-box;
@@ -57,9 +58,8 @@ body > div,
     -webkit-order: 1;
         -ms-flex-order: 1;
             order: 1;
+    border-bottom-right-radius: 0;
     box-shadow: 1px 2px 0 #D4D4D4;
-    background-color: #666666;
-    color: #fff;
 }
 
 .admin .msg {
@@ -67,6 +67,7 @@ body > div,
     -webkit-order: 1;
         -ms-flex-order: 1;
             order: 1;
+    border-top-left-radius: 0;
     box-shadow: -1px 2px 0 #D4D4D4;
 }
 
@@ -75,23 +76,21 @@ body > div,
     background: white;
     min-width: 50%;
     max-width: 80%;
-    padding: 0.3rem 0.6rem 0.3rem 0.6rem;
-    border-radius: 0.5rem;
+    padding: 10px;
+    border-radius: 2px;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
 }
 
-span.msg-bold {
-    font-weight: 700;
-}
-
 .msg p {
+    margin: 0 0 3.2px 0;
     margin: 0 0 0.2rem 0;
-    font-weight: 400;
 }
 
 .msg .time {
+    font-size: 11.2px;
     font-size: 0.7rem;
     color: #ccc;
+    margin-top: 3px;
     float: right;
     cursor: default;
     -webkit-touch-callout: none;
@@ -162,8 +161,7 @@ span.msg-bold {
     border-top: 2px solid #e5e5e5;
     outline: none;
     color: #777;
-    font-size: 0.5rem;
-    padding: 0.1rem 0.5rem;
+    font-size: 10px;
     text-align: right;
     font-weight: 200;
     text-decoration: none;
