@@ -100,7 +100,7 @@ span.msg-bold {
     -ms-user-select: none;
 }
 
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     min-width: 12px;
     width: 12px;
     max-width: 12px;
@@ -131,7 +131,7 @@ span.msg-bold {
 ::-webkit-scrollbar-button {
     display: block;
     height: 24px;
-}
+}*/
 
 /* I N P U T */
 .input-area {
