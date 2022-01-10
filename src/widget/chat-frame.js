@@ -7,11 +7,11 @@ export default class ChatFrame extends Component {
         return false;
     }
 
-    render({intergramId, host, iFrameSrc, isMobile, conf},{}) {
+    render({intergramId, host, iFrameSrc, isMobile, conf, userId},{}) {
         let dynamicConf = window.intergramOnOpen || {}; // these configuration are loaded when the chat frame is opened
         let encodedConf = encodeURIComponent(JSON.stringify({...conf, ...dynamicConf}));
         return (
-            <iframe src={iFrameSrc + '?id=' + intergramId + '&host=' + host + '&conf=' + encodedConf }
+            <iframe src={iFrameSrc + '?id=' + intergramId + '&host=' + host + '&conf=' + encodedConf + '&userId=' + userId }
                     frameborder='0'
                     style={{
                         flex: '1',

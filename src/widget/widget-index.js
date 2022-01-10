@@ -21,6 +21,7 @@ function injectChat() {
         const host = window.location.host || 'unknown-host';
         const conf = { ...defaultConfiguration, ...window.intergramCustomizations };
         const chatId = window.intergramId;
+        let userId = 'Putro Satrio';
 
         fetch(server + '/usage-start',{
             method: 'POST',
@@ -38,6 +39,7 @@ function injectChat() {
                     render(
                         <Widget intergramId={chatId}
                                 host={host}
+                                userId={userId}
                                 isMobile={window.screen.width < 500}
                                 iFrameSrc={iFrameSrc}
                                 conf={conf}
