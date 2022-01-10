@@ -39,7 +39,7 @@ app.post('/hook', function(req, res){
             if (usersOnline.length) {
                 sendTelegramMessage(chatId,
                     "*Online users* \n" +
-                    usersOnline.map(user => "- `" + user.userId + "`").join("\n"),
+                    usersOnline.map(user => "- *" + user.userId + "*").join("\n"),
                     "Markdown");
             } else {
                 sendTelegramMessage(chatId, "No users online");
@@ -146,7 +146,7 @@ io.on('connection', function(client){
             users[userIndex].messages.forEach(message => io.emit(chatId + "-" + userId, message));
             users[userIndex].messages = [];
             if (users[userIndex].active) {
-                sendTelegramMessage(chatId, "`" + userId + "` has come back", "Markdown", true);
+                sendTelegramMessage(chatId, "*" + userId + "* has come back", "Markdown", true);
             }
         }
 
@@ -159,7 +159,7 @@ io.on('connection', function(client){
 
             io.emit(chatId + "-" + userId, msg);
             let visitorName = msg.visitorName ? "[" + msg.visitorName + "]: " : "";
-            sendTelegramMessage(chatId, "`" + userId + "`:" + visitorName + " " + msg.text, "Markdown");
+            sendTelegramMessage(chatId, "*" + userId + "*:" + visitorName + " " + msg.text, "Markdown");
 
             if (users[userIndex]) {
                 users[userIndex].active = true;
@@ -187,7 +187,7 @@ io.on('connection', function(client){
                         users[userIndex].active = false;
                     }, 60000);
                     if (!users[userIndex].banned) {
-                        sendTelegramMessage(chatId, "`" + userId + "` has left", "Markdown", true);
+                        sendTelegramMessage(chatId, "*" + userId + "* has left", "Markdown", true);
                     }
                 }
             }
