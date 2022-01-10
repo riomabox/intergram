@@ -40,7 +40,7 @@ export default class MessageArea extends Component {
                     return (
                         <div class={'chat-message ' + from}>
                             <div class="msg">
-                                <p><span class='msg-bold'>{name ? name + ': ' : ''}</span>{text.trim()}</p>
+                                <p><span class='msg-bold'>{name ? 'Admin (' + name + ') : ' : ''}</span>{text.trim()}</p>
                                 {/* <p>{text.split('\n').map((item, key) => <span key={key}>{item}<br/></span>)}</p> */}
                                 { (props.conf.displayMessageTime) ?
                                     <div class="time">
