@@ -16,7 +16,7 @@ export default class ChatFrame extends Component {
                     style={{
                         flex: '1',
                         width: '100%',
-                        height: 0,
+                        height: '100%',
                     }}>
             </iframe>
         );
